@@ -5,6 +5,7 @@ def my_collect(collection)
     new_collection << yield(collection[i])
     i += 1
   end
+  new_collection
 end
 
-my_collect()
+my_collect("Ruby", "Javascript", "Python", "Obective-C") { |lang| lang.upcase }
